@@ -1,9 +1,11 @@
+import { DatePipe, DecimalPipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
+  imports: [DatePipe, DecimalPipe],
 })
 export class AppComponent {
   currentDate = new Date();
@@ -15,7 +17,7 @@ export class AppComponent {
   };
 
   historicTemperatures = [
-    25, 37, 19, -4, 28, 21, 19, 28, 33, 31, 9, 11, 5, -12, -5,
+    25, 37, 19, -4, 28, 21, 19, 28, 33, 31, 9, 11, 5, -12, -50,
   ];
 
   onReset(index: number) {
